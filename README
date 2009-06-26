@@ -1,4 +1,28 @@
 ValidatesStateId
 ================
 
-Description goes here
+Installation
+------------
+
+1. go to your application's 'vendor/plugins' directory
+2. git clone github.com:asapnet/validates_state_id.git
+
+Optionally, you might want to bask in the glory of a unit-tested piece of
+software, simply by running 'rake test' inside the validates_state_id directory.
+
+
+Usage
+-----
+
+validates_as_state_id :number, :state_field => :us_states
+
+# Number: id number
+# state_field : state to be validation against.
+
+
+Current ToDo's
+--------------
+
+- Test don't pass outside Rails project.
+- Check to see if validates_format_of is a better choice.
+

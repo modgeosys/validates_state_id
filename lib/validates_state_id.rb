@@ -12,6 +12,7 @@ module ActiveRecord
           state = record.send(configuration[:state_field])
           state_upcase = state.upcase
           if valid_state?(state_upcase)
+            # TODO: can we use validates_format_of here vs. current method?
             unless valid_id?(state_upcase, value)
               state_descriptor = id_states[state_upcase]
               message = "#{state} must have the following format: #{state_descriptor[:synopsis]}"
